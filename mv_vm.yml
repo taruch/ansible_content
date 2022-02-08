@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+    - secrets.yml
+  tasks:
+  - name: Move the Vms
+    vmware_guest_move:
+      hostname: "optimus.syslab.pnq2.redhat.com"
+      username: "administrator@syslab.pnq2.redhat.com"
+      password: "{{ vmware_password }}"
+      datacenter: "Prime"
+      validate_certs: no
+      name: "{{ vm_name }}"
+      dest_folder: "/Prime/vm/sysmgmt-pnq/saydas"
+    delegate_to: localhost  
+    register: vmware_vms
+  - name: Print the Vmware details
+    debug:
+      var: vmware_vms

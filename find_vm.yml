@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+    - secrets.yml
+  tasks:
+  - name: Find the vm info
+    vmware_vm_info:
+      hostname: "optimus.syslab.pnq2.redhat.com"
+      username: "administrator@syslab.pnq2.redhat.com"
+      password: "{{ vmware_password }}"
+      folder: "{{ user_folders  }}"
+      validate_certs: no
+      show_attribute: yes
+    register: vmware_vms
+  - name: Print the Vmware details
+    debug:
+      var: vmware_vms
