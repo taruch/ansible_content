@@ -1,6 +1,8 @@
 ---
 collections:
 - name: servicenow.servicenow
+- name: servicenow.itsm
+- name: aminvakil.lamp
 - name: cisco.nxos
 - name: ansible.network
 - name: ansible.tower
