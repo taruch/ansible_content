@@ -1,6 +1,6 @@
 ---
 
-- name: apply MOTD to all nodes
+- name: Ping all Nodes
   hosts: all
   remote_user: truch
   become: true
