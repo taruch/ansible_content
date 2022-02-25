@@ -2,3 +2,5 @@
 collections:
 - name: servicenow.servicenow
 - name: cisco.nxos
+- name: ansible.network
+- name: ansible.tower
