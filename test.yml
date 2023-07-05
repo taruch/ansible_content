@@ -1,0 +1,11 @@
+---
+- name: Test Playbook for EDA
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: print debug message
+      ansible.builtin.debug:
+        msg: "{{ Horray EDA! }}"
+
+
+...
