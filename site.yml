@@ -1,10 +1,9 @@
 ---
 
-- name: Ping all Nodes
+- name: Install MySQL
   hosts: all
   remote_user: truch
   become: true
 
-  tasks:
-    - ping:
-
+  roles:
+    - role: aminvakil.mysql_initial
