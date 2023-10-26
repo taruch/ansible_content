@@ -1,6 +1,5 @@
 ---
 collections:
-- name: servicenow.servicenow
 - name: servicenow.itsm
 - name: aminvakil.lamp
 - name: cisco.nxos
